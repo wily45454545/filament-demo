@@ -192,9 +192,9 @@ class OrderResource extends Resource
 
                 Tables\Filters\Filter::make('created_at')
                     ->form([
-                        Forms\Components\DatePicker::make('created_from')
+                        Forms\Components\DateTimePicker::make('created_from')
                             ->placeholder(fn ($state): string => 'Dec 18, ' . now()->subYear()->format('Y')),
-                        Forms\Components\DatePicker::make('created_until')
+                        Forms\Components\DateTimePicker::make('created_until')
                             ->placeholder(fn ($state): string => now()->format('M d, Y')),
                     ])
                     ->query(function (Builder $query, array $data): Builder {
